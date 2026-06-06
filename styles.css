@@ -289,6 +289,27 @@ a.ref:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
 .ps-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
 @media (max-width: 720px) { .ps-cols { grid-template-columns: 1fr; } }
 
+/* ---------- Data visuals (inline SVG charts) ---------- */
+.viz { margin: 0 0 1.5rem; }
+.viz:last-child { margin-bottom: 0; }
+.viz-title { font-weight: 700; color: var(--deep); margin: 0 0 .55rem; font-size: 1.02rem; }
+.viz svg { width: 100%; height: auto; display: block; }
+.viz figcaption, figcaption { text-align: left; }
+figcaption a { color: var(--primary); }
+.viz + .viz { padding-top: 1.1rem; border-top: 1px solid #eef3f6; }
+
+/* El Niño / La Niña comparison */
+.enso { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.enso-card { border-radius: 12px; padding: 1rem 1.1rem; text-align: center; border: 1px solid; }
+.enso-card.warm { background: var(--prob-bg); border-color: var(--prob-bd); color: var(--prob-ink); }
+.enso-card.cool { background: var(--gen-bg); border-color: var(--gen-bd); color: var(--gen-ink); }
+.enso-h { font-weight: 800; font-size: 1.05rem; margin-bottom: .15rem; }
+.enso-arrow { font-size: 2.3rem; line-height: 1; font-weight: 800; }
+.enso-t { font-weight: 700; margin-top: .2rem; }
+.enso-d { font-size: .95rem; opacity: .92; }
+.enso-note { text-align: center; color: var(--muted); font-style: italic; margin: .7rem 0 0; }
+@media (max-width: 560px) { .enso { grid-template-columns: 1fr; } }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 560px) {
   body { font-size: 1.06rem; }
